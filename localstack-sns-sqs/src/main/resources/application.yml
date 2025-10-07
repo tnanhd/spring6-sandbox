@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: localstack-sns-sqs
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:prod}
+  cloud:
+    aws:
+      sqs:
+        enabled: ${SQS_ENABLED:true}
+        region: ${AWS_REGION:ap-southeast-1}
+      sns:
+        enabled: ${SNS_ENABLED:true}
+        region: ${AWS_REGION:ap-southeast-1}
+
+com:
+  example:
+    aws:
+      sqs:
+        queue-name: ${SQS_QUEUE_NAME:my-test-queue}
+        filtered-queue-name: ${SQS_FILTERED_QUEUE_NAME:my-filtered-queue}
+      sns:
+        topic-name: ${SNS_TOPIC_NAME:my-test-topic}
+        topic-arn: ${SNS_TOPIC_ARN:arn:aws:sns:ap-southeast-1:488575804397:my-test-topic}

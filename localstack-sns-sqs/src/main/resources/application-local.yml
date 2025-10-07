@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    aws:
+      sqs:
+        endpoint: http://localhost:4566
+      sns:
+        endpoint: http://localhost:4566
+
+com:
+  example:
+    aws:
+      sns:
+        endpoint: http://localhost:4566
+        region: ap-southeast-1
+        topic-arn: arn:aws:sns:ap-southeast-1:000000000000:my-test-topic
