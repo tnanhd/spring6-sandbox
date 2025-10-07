@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: feign-client
+  profiles:
+    active: secure
